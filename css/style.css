@@ -109,7 +109,7 @@ nav ul li a:hover {
 
 /* Active Page Indicator */
 nav ul li.active a {
-    background-color: #4169e1;  /* Royal blue */
+    background-color: #87cefa;  /* Royal blue */
     color: white;
 }
 
