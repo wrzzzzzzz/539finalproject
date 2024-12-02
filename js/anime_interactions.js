@@ -66,23 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // 4. Navigation Hover Enhancements
-    const enhanceNavigation = () => {
-        const navLinks = document.querySelectorAll('nav ul li a');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('mouseenter', (e) => {
-                e.target.style.transform = 'scale(1.1) rotate(2deg)';
-                e.target.style.color = '#ffffff';
-            });
-            
-            link.addEventListener('mouseleave', (e) => {
-                e.target.style.transform = 'scale(1) rotate(0)';
-                e.target.style.color = '#4682b4';
-            });
-        });
-    };
-
     // Initialize all features
     createRecommendationFeature();
     enhanceNavigation();
