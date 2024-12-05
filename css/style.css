@@ -136,13 +136,6 @@ nav ul li.active a {
     color: white;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
-
 .recommendation-container {
     /* font-family: cursive, sans-serif; */
     display: flex;
@@ -215,69 +208,28 @@ nav ul li.active a {
     transform: scale(1.05);
 }
 
-.author-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.author-card {
-    display: flex;
-    flex-wrap: wrap;
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 100%;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.author-photo {
-    flex: 0 0 300px;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    align-self: flex-start;
+/* Tablet view - 2 columns */
+@media (max-width: 1024px) {
+    .anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.author-info {
-    flex: 1;
-    min-width: 300px;
+/* Mobile view - 1 column */
+@media (max-width: 600px) {
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.genre-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
-}
-
-.genre-list li {
-    background-color: #e0e0e0;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-link {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 15px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.social-link:hover {
-    background-color: #d0d0d0;
-}
 
