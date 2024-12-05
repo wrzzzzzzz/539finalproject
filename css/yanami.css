@@ -95,9 +95,19 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Default view - 4 columns */
+@media (min-width: 1025px) {
+    .character-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .poster-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 /* Tablet view - 2 columns */
 @media (max-width: 1024px) {
-    .character-card {
+    .character-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -108,7 +118,7 @@
 
 /* Mobile view - 1 column */
 @media (max-width: 600px) {
-    .character-card {
+    .character-grid {
         grid-template-columns: 1fr;
     }
 
