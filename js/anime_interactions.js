@@ -12,6 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'scale(1)';
             card.style.boxShadow = '0 6px 10px rgba(0,0,0,0.1)';
         });
+
+        // Description Card Interaction
+        card.addEventListener('click', (event) => {
+            // Prevent action if clicking on a link
+            if (event.target.tagName.toLowerCase() === 'a') {
+                return;
+            }
+
+            // Close other open description cards
+            animeCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('description-active');
+                }
+            });
+
+            // Toggle current card's description
+            card.classList.toggle('description-active');
+        });
+    });
+
+    // Close description cards when clicking outside
+    document.addEventListener('click', (event) => {
+        animeCards.forEach(card => {
+            if (!card.contains(event.target)) {
+                card.classList.remove('description-active');
+            }
+        });
     });
 
     // 2. Dynamic Random Recommendation Feature
@@ -68,6 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all features
     createRecommendationFeature();
-    enhanceNavigation();
     animatePageLoad();
 });
