@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #004080;
+    --secondary-color: #89c3f2;
+    --background-light: #e6f2ff;
+    --background-card: #b3d9ff;
+    --accent-color: #4da6ff;
+    --text-color: #011427;
+}
 
 .poster-grid {
     display: grid;
@@ -93,6 +101,31 @@
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-i-like {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.why-i-like h2 {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+}
+
+.anime-characters h2 {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
 }
 
 /* Default view - 4 columns */

@@ -1,0 +1,330 @@
+.anime-overview {
+    background: linear-gradient(to bottom right, #f0f8ff, #e6f2ff);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #89c3f2;
+    position: relative;
+    overflow: hidden;
+}
+
+.anime-overview h2 {
+    text-align: center;
+    color: #004080;
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #004080, #89c3f2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.anime-overview h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #004080, #89c3f2);
+}
+
+.overview-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.anime-info,
+.plot-summary {
+    flex: 1;
+    background-color: rgb(229, 247, 247);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.plot-summary p {
+    color: #011427;
+    background-color: rgb(228, 230, 232);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.anime-info:hover,
+.plot-summary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.anime-info h3,
+.plot-summary h3 {
+    color: #004080;
+    border-bottom: 2px solid #89c3f2;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.anime-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.anime-info li {
+    padding: 10px;
+    border-bottom: 1px solid #e6f2ff;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.anime-info li:last-child {
+    border-bottom: none;
+}
+
+.anime-info li:hover {
+    background-color: #f0f8ff;
+}
+
+.anime-info li strong {
+    color: #004080;
+    min-width: 150px;
+}
+
+.plot-summary p {
+    color: #011427;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.anime-info ul {
+    list-style-type: none;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #89c3f2;
+}
+
+.anime-info li {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(137, 195, 242, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.anime-info li:last-child {
+    border-bottom: none;
+}
+
+.anime-info li::before {
+    content: '•';
+    position: absolute;
+    left: 5px;
+    color: #004080;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.anime-info li:hover {
+    background-color: rgba(137, 195, 242, 0.1);
+    transform: translateX(10px);
+}
+
+.anime-info li:hover::before {
+    opacity: 1;
+}
+
+.anime-info li strong {
+    color: #004080;
+    min-width: 180px;
+    font-family: 'Arial Black', 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-right: 15px;
+}
+
+.anime-info li span {
+    color: #011427;
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-weight: 500;
+    flex-grow: 1;
+    text-shadow: 1px 1px 2px rgba(0, 64, 128, 0.1);
+}
+
+/* Playful hover effect for entire list */
+.anime-info ul:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.015);
+}
+
+.plot-summary {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #89c3f2;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.plot-summary h3 {
+    background: linear-gradient(to right, #004080, #89c3f2);
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Arial Black', 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.plot-summary h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #004080, #89c3f2);
+}
+
+.plot-summary p {
+    padding: 20px;
+    color: #011427;
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    background: white;
+    margin: 0;
+    font-size: 1em;
+}
+
+.plot-summary p::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 4em;
+    color: rgba(137, 195, 242, 0.2);
+    font-family: serif;
+}
+
+.plot-summary p::after {
+    content: '"';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 4em;
+    color: rgba(137, 195, 242, 0.2);
+    font-family: serif;
+}
+
+/* Hover effect */
+.plot-summary:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.015);
+}
+
+/* Subtle text highlight on hover */
+.plot-summary p:hover {
+    background: linear-gradient(to right, rgba(137, 195, 242, 0.05), white);
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.character-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.takagi {
+    background-color: #fff0f5;
+}
+
+.nishikata {
+    background-color: #f0f8ff;
+}
+
+.character-name {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.character-description {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .plot-summary p {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Subtle Background Animation */
+.anime-overview::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+            rgba(137, 195, 242, 0.1) 0%,
+            transparent 70%);
+    transform: rotate(-45deg);
+    z-index: -1;
+    animation: subtle-gradient 10s ease infinite alternate;
+}
+
+@keyframes subtle-gradient {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1.1);
+        opacity: 0.5;
+    }
+}

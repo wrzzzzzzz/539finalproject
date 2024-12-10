@@ -1,0 +1,52 @@
+.anime-characters {
+    text-align: center;
+    padding: 20px;
+}
+
+.character-grid {
+    display: grid;
+    gap: 20px;
+    /* Default layout: 6 columns on large screens */
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Medium screens: reduce to 3 columns */
+@media (max-width: 1024px) {
+    .character-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small screens: reduce to 2 columns */
+@media (max-width: 768px) {
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.character-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.character-card img {
+    width: 100%;
+    height: auto;
+}
+
+.character-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.character-card p {
+    font-size: 0.9em;
+    padding: 0 10px 10px;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
